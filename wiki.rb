@@ -11,5 +11,7 @@ get "/" do
 end
 
 get "/:title" do
-  page_content(params[:title])
+  @title = params[:title]
+  @content = page_content(params[:title])
+  erb :show
 end
