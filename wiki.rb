@@ -18,7 +18,7 @@ def delete_content(title)
 end
 
 get "/" do
-  erb :welcome, layout: :page
+  erb :welcome
 end
 
 get "/new" do
