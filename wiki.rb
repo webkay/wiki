@@ -37,3 +37,8 @@ get "/:title/edit" do
   @content = page_content(params[:title])
   erb :edit
 end
+
+put "/:title" do
+  save_content(params['title'], params['content'])
+  redirect URI.escape "/#{params['title']}"
+end
