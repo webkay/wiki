@@ -31,3 +31,9 @@ get "/:title" do
   @content = page_content(params[:title])
   erb :show
 end
+
+get "/:title/edit" do
+  @title = params[:title]
+  @content = page_content(params[:title])
+  erb :edit
+end
